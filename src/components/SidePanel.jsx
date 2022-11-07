@@ -84,7 +84,7 @@ const AlterationText = styled(Typography)(() => ({
 
 const SidePanel = ({ cart }) => {
   const cartProducts = cart.map((item) => (
-    <ProductsBox>
+    <ProductsBox key={item.id}>
       <ListItem display="flex" sx={{ flexDirection: "column" }}>
         <ListItemAvatar>
           <Avatar
@@ -110,7 +110,7 @@ const SidePanel = ({ cart }) => {
             width="100%"
             alignItems="center"
           >
-            <Typography variant="h7">R$ 10,00</Typography>
+            <Typography variant="h4">R$ 10,00</Typography>
             <Box display="flex" justifyContent="space-between">
               <IconButtonActions variant="outlined"> - 01 +</IconButtonActions>
               <IconButtonActions variant="outlined">

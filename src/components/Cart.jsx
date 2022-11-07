@@ -71,7 +71,7 @@ const Cart = ({ cart }) => {
       </DrawerTitle>
       <Details>
         {cart.map((item) => (
-          <ProductsBox>
+          <ProductsBox key={item.id}>
             <ListItem display="flex" sx={{ flexDirection: "column" }}>
               <ListItemAvatar>
                 <Avatar
